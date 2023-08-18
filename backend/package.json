@@ -1,0 +1,37 @@
+{
+  "name": "@raketech/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "engines": {
+    "node": "18",
+    "npm": "9"
+  },
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "tsc",
+    "dev": "npm run build && concurrently -k \"tsc -w\" \"nodemon ./dist/index.js\"",
+    "eslint": "eslint src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-cache": "^5.1.2",
+    "typescript": "^5.1.6",
+    "zod": "^3.22.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-import": "^2.28.0",
+    "nodemon": "^3.0.1"
+  }
+}
